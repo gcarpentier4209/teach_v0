@@ -7,6 +7,12 @@
 
 require('./bootstrap');
 
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbvue/build/css/mdb.css';
+import {Navbar, NavbarItem, NavbarNav } from 'mdbvue';
+
+
+
 window.Vue = require('vue');
 
 /**
@@ -14,13 +20,16 @@ window.Vue = require('vue');
  * Vue components. It will recursively scan this directory for the Vue
  * components and automatically register them with their "basename".
  *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ * Eg. ./components/ExampleComponent.vue -> <example-components></example-components>
  */
 
 // const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+// files.keys().map(key => Vue.components(key.split('/').pop().split('.')[0], files(key).default))
+
+
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('header-component', require('./components/HeaderComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
