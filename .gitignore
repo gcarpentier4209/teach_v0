@@ -15,3 +15,5 @@ laravel-bootstrap-md/
 package-lock.json
 public/mix-manifest.json
 suivi_projet.xlsx
+/public/fonts
+npm

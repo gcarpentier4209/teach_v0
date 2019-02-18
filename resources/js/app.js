@@ -1,5 +1,5 @@
-window._ = require('lodash');
-window.Popper = require('popper.js').default;
+// window._ = require('lodash');
+// window.Popper = require('popper.js').default;
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -9,7 +9,20 @@ window.Popper = require('popper.js').default;
 require('./bootstrap');
 require('@fortawesome/fontawesome-free/js/all.js');
 
-window.Vue = require('vue');
+import '@mdi/font/css/materialdesignicons.css';
+import 'vuetify/dist/vuetify.min.css';
+import Vue from 'vue';
+import Vuetify from 'vuetify';
+import VueRouter from 'vue-router';
+
+
+// window.Vue = require('vue');
+
+Vue.use(Vuetify, {
+    iconfont: 'fa'
+})
+
+Vue.use(VueRouter)
 
 /**
  * The following block of code may be used to automatically register your
@@ -22,7 +35,7 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+ Vue.component('sidebar-form', require('./components/sidebarForm.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
