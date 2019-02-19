@@ -6,6 +6,7 @@
             <v-container fluid>
                 <router-link tag="li" to="/" >Home</router-link>
                 <router-link tag="li" to="/about" >About</router-link>
+                <router-link tag="li" to="/cards" >Cards</router-link>
                 <v-btn color="success">Success</v-btn>
 
 
