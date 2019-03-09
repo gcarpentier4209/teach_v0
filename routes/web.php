@@ -11,13 +11,6 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-//
-//Auth::routes();
-//
-//Route::get('/', 'HomeController@index')->name('home');
-
-
-Route::get('/{any}', 'SinglePageController@index')->where('any', '.*');
+Route::get('/{any}', function () {
+    return view('card');
+})->where('any', '.*');

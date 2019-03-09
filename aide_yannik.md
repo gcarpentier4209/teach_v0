@@ -13,3 +13,13 @@ pour la barre de recherche https://bootsnipp.com/snippets/35V6b
 
 install icone  npm install material-design-icons
 et     npm install @fortawesome/fontawesome-free
+
+
+
+06032019
+
+php artisan make:model Card -m
+
+php artisan make:controller CardController
+
+php artisan make:resource CardCollection
